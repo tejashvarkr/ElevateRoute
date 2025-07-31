@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility Styles */
+.high-contrast {
+  filter: contrast(150%) brightness(110%);
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+}
+
+.large-fonts {
+  font-size: 1.2em !important;
+}
+
+.large-fonts h1 {
+  font-size: 2.5rem !important;
+}
+
+.large-fonts h2 {
+  font-size: 2rem !important;
+}
+
+.large-fonts h3 {
+  font-size: 1.75rem !important;
+}
+
+.large-fonts p,
+.large-fonts span,
+.large-fonts div {
+  font-size: 1.2rem !important;
+}
+
+.large-fonts button {
+  font-size: 1.1rem !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+/* Focus indicators for accessibility */
+*:focus {
+  outline: 3px solid #3B82F6 !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast mode adjustments */
+.high-contrast .bg-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast .text-gray-600 {
+  color: #000000 !important;
+}
+
+.high-contrast .text-gray-500 {
+  color: #333333 !important;
+}
+
+/* Voice guidance animations */
+@keyframes pulse-voice {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.voice-active {
+  animation: pulse-voice 1s infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+button, input, select {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Enhanced button styles for accessibility */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Loading animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
