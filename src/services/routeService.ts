@@ -4,7 +4,7 @@ import { ELEVATION_SAMPLE_POINTS } from '../config/maps';
 export class RouteService {
   private directionsService: google.maps.DirectionsService;
   private elevationService: google.maps.ElevationService;
-  private placesService: google.maps.places.PlacesService | null = null;
+  private placesService: google.maps.places.Place | null = null;
 
   constructor() {
     this.directionsService = new google.maps.DirectionsService();
