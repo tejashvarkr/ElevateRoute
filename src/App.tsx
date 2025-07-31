@@ -33,15 +33,15 @@ function App() {
   const [isCalculating, setIsCalculating] = useState(false);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<AccessibilityFeatures>({
     wheelchairAccessible: false,
-    audioDescriptions: true,
+    audioDescriptions: false,
     visualIndicators: true,
     tactileFeedback: false,
-    voiceNavigation: true,
+    voiceNavigation: false,
     highContrast: false,
     largeFonts: false,
   });
   const [voiceGuidance, setVoiceGuidance] = useState<VoiceGuidanceType>({
-    enabled: true,
+    enabled: false,
     language: 'en-US',
     speed: 1.0,
     volume: 0.8,
