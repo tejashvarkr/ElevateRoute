@@ -12,7 +12,7 @@ export class RouteService {
   }
 
   setMap(map: google.maps.Map) {
-    this.placesService = new google.maps.places.PlacesService(map);
+    this.placesService = new google.maps.places.Place(map);
   }
 
   async calculateRoute(
